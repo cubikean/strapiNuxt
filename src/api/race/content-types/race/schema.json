@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "races",
+  "info": {
+    "singularName": "race",
+    "pluralName": "races",
+    "displayName": "Races",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "RaceName": {
+      "type": "string"
+    },
+    "RaceImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "championship": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::championship.championship",
+      "inversedBy": "races"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "scores": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::score.score",
+      "inversedBy": "races"
+    }
+  }
+}

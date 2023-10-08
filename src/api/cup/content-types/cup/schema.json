@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cups",
+  "info": {
+    "singularName": "cup",
+    "pluralName": "cups",
+    "displayName": "Cup"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CupName": {
+      "type": "string"
+    },
+    "CupImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "CupName"
+    }
+  }
+}

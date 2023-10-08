@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "championships",
+  "info": {
+    "singularName": "championship",
+    "pluralName": "championships",
+    "displayName": "Championship",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "races": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::race.race",
+      "mappedBy": "championship"
+    },
+    "ChampionshipTitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "ChampionshipImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
